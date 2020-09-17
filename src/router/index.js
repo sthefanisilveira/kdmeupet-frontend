@@ -1,16 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
-import Ong from '../views/Ong.vue';
-import Adote from '../views/Adote.vue';
+import Hero from '../views/site/HeroPage.vue';
+import Ong from '../views/ong/Ong.vue';
+import Adote from '../views/ong/Adote.vue';
+import Login from '../views/login/Login.vue';
+import Register from '../views/login/Register.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Hero',
+    component: Hero,
   },
   {
     path: '/ongs',
@@ -21,6 +23,16 @@ const routes = [
     path: '/animais',
     name: 'Adote',
     component: Adote,
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+  },
+  {
+    path: '/cadastro',
+    name: 'Register',
+    component: Register,
   },
 ];
 
