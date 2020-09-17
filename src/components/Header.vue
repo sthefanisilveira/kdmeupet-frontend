@@ -2,13 +2,13 @@
     <div>
         <header>
             <div class="header-brand">
-                <a href="/">Meu Projeto</a>
+                <a href="/">SeuLogo</a>
             </div>
 
             <ul class="header-menu">
                 <li><a href="/animais">Adote</a></li>
                 <li><a href="/ongs">ONGs</a></li>
-                <li><a href="/">Entrar | Registrar agora</a></li>
+                <li><a href="/cadastro">Entrar</a></li>
             </ul>
 
         </header>
