@@ -23,5 +23,11 @@ export default {
 <style>
   * {
     margin: 0;
+    
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    color: #333;
   }
 </style>

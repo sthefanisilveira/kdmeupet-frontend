@@ -5,7 +5,7 @@
             <ul class="footer-menu">
                 <li><a href="/animais">Adote</a></li>
                 <li><a href="/ongs">ONGs</a></li>
-                <li><a href="/">Entrar | Registrar agora</a></li>
+                <li><a href="/">Entrar</a></li>
             </ul>
 
         </footer>
@@ -32,11 +32,18 @@ footer {
     display: flex;
     flex-wrap: wrap;    
     color: var(--color-text);
+    justify-content: center;  
+}
+
+.footer-menu {
+    display: flex;
 }
 
 .footer-menu li {
     list-style: none;
     padding: 10px;
+    /* display: inline; */
+    /**/ 
 }
 
 .footer-menu li a {
