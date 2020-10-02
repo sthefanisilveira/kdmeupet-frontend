@@ -2,7 +2,7 @@
     <div>
         <header>
             <div class="header-brand">
-                <a href="/">SeuLogo</a>
+                <a href="/"> <img src="../assets/logo.png" alt="logo KdMeuPet"></a>
             </div>
 
             <ul class="header-menu">
@@ -35,7 +35,8 @@ header {
     align-items: center;
     height: 70px;
     background: var(--color-light);
-    padding: 10px;
+    padding: 0px 50px 0px 50px;
+    /* border-bottom: 1px solid #292F36; */
 }
 
 .header-brand {
@@ -58,10 +59,26 @@ header {
     color: var(--color-text);
 }
 
+.header-menu li:hover {
+    background-color: #DADAD9;
+    border-radius: 50px 50px 50px 50px;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+  }
+
 .header-menu li a {
     color: var(--color-text);
     text-decoration: none;
     padding-left: 10px;
+    opacity: 0.8;
+}
+
+.header-menu li a:hover {
+  opacity: 1;
+  width: 30px;  
+  color: #FF6B6B;
 }
 
 </style>
