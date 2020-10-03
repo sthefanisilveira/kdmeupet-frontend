@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Hero from '../views/site/HeroPage.vue';
 import Ong from '../views/ong/Ong.vue';
-import Adote from '../views/ong/Adote.vue';
+import Adote from '../views/ong/AdotePage.vue';
 import Login from '../views/login/Login.vue';
 import Register from '../views/login/Register.vue';
 

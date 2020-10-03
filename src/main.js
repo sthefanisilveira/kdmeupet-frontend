@@ -4,6 +4,8 @@ import 'buefy/dist/buefy.css'
 import App from './App.vue';
 import router from './router';
 
+Vue.use(Buefy);
+
 Vue.config.productionTip = false;
 Vue.use(Buefy);
 

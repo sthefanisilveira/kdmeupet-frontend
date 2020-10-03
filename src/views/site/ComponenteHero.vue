@@ -1,7 +1,7 @@
 <!-- Nome antetior: AboutSection -->
 <template>
   <div class="about">
-    <div class="container">
+    <div class="about-container">
     <p>Você quer conhecer os pets disponíveis para adoção da sua região mas não sabe onde procurar? <br> Nossa comunidade te ajudará nessa busca!</p>
     <div class="about-action">
       <button @click="goToRegister">Cadastre-se</button>
@@ -29,14 +29,14 @@ export default {
   width: 100vw;
 }
 
-.about .container {
+.about-container {
   padding-top: 30px;
 }
 
-.about .container p {
+.about-container p {
   font-size: 20px;
 }
-
+  
 .about-action {
   display: flex;
   justify-content: center;

@@ -2,24 +2,22 @@
   <div class="register">
     <section class="bg-credentials">
       <div class="credentials-content">
-        <h1>Seu Pet</h1>
-        <p>Seu bichinho a um clique de você.</p>
+        <h1>Kd Meu Pet</h1>
+        <p>Seu novo bichinho a um clique de você.</p>
       </div>
     </section>
 
     <section class="bg-form">
       <div class="bg-formContent">
-        <h1>Register</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
+        <h1>Cadastre-se!</h1>
       <form>
-        <label for="">Name:</label> <br>
+        <label for="">Nome:</label> <br>
         <input type="text"
               requrired>
 
-        <div class="form-valid--error">
+        <!-- <div class="form-valid--error">
           <p>O campo nome é obrigatório</p>
-        </div>
+        </div> -->
 
 
         <label for="">Email:</label><br>
@@ -27,13 +25,13 @@
               required>
         <br><br>
 
-        <label for="">Password:</label><br>
+        <label for="">Senha:</label><br>
         <input type="password"
               minlength="6"
               maxlength="24"
               required> <br><br>
 
-        <label for="">Re-type Password:</label><br>
+        <label for="">Confirme sua senha:</label><br>
         <input type="password"
               minlength="6"
               maxlength="24"><br><br>
