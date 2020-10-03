@@ -2,41 +2,26 @@
   <div class="login">
     <section class="bg-login">
       <div class="credentials-content">
-        <h1>Seu Pet</h1>
+        <h1>Kd Meu Pet</h1>
         <p>Seu bichinho a um clique de você.</p>
       </div>
     </section>
 
     <section class="bg-form">
       <div class="bg-formContent">
-        <h1>Login</h1> <br>
-        <p>Acessar sua cont agora mesmo...</p>
+        <h1>Login</h1>
 
       <form>
-        <label for="">Name:</label> <br>
-        <input type="text"
-              requrired>
-
-        <div class="form-valid--error">
-          <p>O campo nome é obrigatório</p>
-        </div>
-
-
         <label for="">Email:</label><br>
         <input type="email"
               required>
         <br><br>
 
-        <label for="">Password:</label><br>
+        <label for="">Senha:</label><br>
         <input type="password"
               minlength="6"
               maxlength="24"
               required> <br><br>
-
-        <label for="">Re-type Password:</label><br>
-        <input type="password"
-              minlength="6"
-              maxlength="24"><br><br>
 
         <div class="center-content">
           <button id="js-submitItem">Salvar</button>
