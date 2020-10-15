@@ -1,14 +1,14 @@
 <template>
-  <div class="ong-page">
-    <h1>ONGs cadastradas</h1>
+  <div class="adote-page">
+    <h1>Animais para adoção</h1>
     <Pesquisa />
     <Card />
   </div>
 </template>
 
 <script>
-import Pesquisa from "./ComponentePesquisaOng";
-import Card from "./ComponenteCardOng";
+import Pesquisa from "./ComponentePesquisa.vue";
+import Card from "./ComponenteCard.vue";
 
 export default {
   name: "Ong",
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style>
-.ong-page {
+.adote-page {
   padding-top: 30px;
 }
 </style>
