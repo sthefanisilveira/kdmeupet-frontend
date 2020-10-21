@@ -14,7 +14,7 @@
         </ul>
       </div>
       <div class="botao-apoio">
-      <a href="">Quero ver</a>
+      <a href="">Quero ajudar</a>
     </div>
     </div>
     

@@ -22,9 +22,15 @@ export default {
 
 <style>
   * {
-    margin: 0;
-    
+    margin: 0;    
   }
+
+  #app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100vh;
+  }
+
   body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
