@@ -3,7 +3,6 @@ import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
 import App from './App.vue';
 import router from './router';
-import './config/bootstrap';
 
 Vue.use(Buefy);
 

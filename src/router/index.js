@@ -9,6 +9,7 @@ import InfoPage from '../views/animais/InfoPage.vue';
 import InfoPageOng from '../views/ong/InfoPageOng.vue';
 import HomeOng from '../views/ong/home/HomeOng.vue';
 import HomeUsuario from '../views/usuario/HomeUsuario.vue';
+import OngProfile from '@/views/ong/OngProfile.vue';
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
     path: '/',
     name: 'Hero',
     component: Hero,
+  },
+  {
+    path: '/ong-perfil',
+    name: 'OngProfile',
+    component: OngProfile,
   },
   {
     path: '/ongs',
