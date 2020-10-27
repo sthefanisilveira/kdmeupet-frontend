@@ -6,7 +6,10 @@ import Adote from '../views/animais/AdotePage.vue';
 import Login from '../views/login/Login.vue';
 import Register from '../views/login/Register.vue';
 import InfoPage from '../views/animais/InfoPage.vue';
-import InfoPageOng from '../views/ong/InfoPageOng';
+import InfoPageOng from '../views/ong/InfoPageOng.vue';
+import HomeOng from '../views/ong/home/HomeOng.vue';
+import HomeUsuario from '../views/usuario/HomeUsuario.vue';
+import OngProfile from '@/views/ong/OngProfile.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +18,11 @@ const routes = [
     path: '/',
     name: 'Hero',
     component: Hero,
+  },
+  {
+    path: '/ong-perfil',
+    name: 'OngProfile',
+    component: OngProfile,
   },
   {
     path: '/ongs',
@@ -45,6 +53,16 @@ const routes = [
     path: '/info-page-ong',
     name: 'InfoPageOng',
     component: InfoPageOng,
+  },
+  {
+    path: '/home-ong',
+    name: 'HomeOng',
+    component: HomeOng,
+  },
+  {
+    path: '/home-usuario',
+    name: 'HomeUsuario',
+    component: HomeUsuario,
   }
 ];
 

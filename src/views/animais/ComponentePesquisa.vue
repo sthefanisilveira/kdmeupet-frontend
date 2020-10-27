@@ -78,12 +78,12 @@ export default {
   border: solid 1px grey;
   border-radius: 50px;
 }
-
+/* 
 .column {
   display: flex;
   flex-direction: row;
   justify-content: center;
-}
+} */
 
 .about-action button {
   background: #4ecdc4;

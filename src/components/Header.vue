@@ -29,7 +29,7 @@
 }
 
 header {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
