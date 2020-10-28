@@ -36,11 +36,12 @@ export default {
 <style>
 .sobre {
   width: 100vw;
-  height: 50vh;
+  height: 100%;
 }
 
 .sobre-container {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .sobre-container-itens {

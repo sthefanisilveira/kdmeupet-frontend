@@ -1,13 +1,11 @@
 <template>
     <div>
         <footer>
-            
             <ul class="footer-menu">
                 <li><a href="/animais">Adote</a></li>
                 <li><a href="/ongs">ONGs</a></li>
                 <li><a href="/">Entrar</a></li>
             </ul>
-
         </footer>
     </div>
 </template>
@@ -42,8 +40,7 @@ footer {
 .footer-menu li {
     list-style: none;
     padding: 10px;
-    /* display: inline; */
-    /**/ 
+    display: inline;
 }
 
 .footer-menu li a {
