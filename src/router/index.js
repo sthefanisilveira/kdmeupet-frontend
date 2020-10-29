@@ -8,7 +8,7 @@ import Register from '../views/login/Register.vue';
 import InfoPage from '../views/animais/InfoPage.vue';
 import InfoPageOng from '../views/ong/InfoPageOng.vue';
 import OngProfile from '@/views/ong/OngProfile.vue';
-import UserProfile from '@/views/user/UserProfile.vue';
+import UserPage from '@/views/user/UserPage.vue';
 
 Vue.use(VueRouter);
 
@@ -24,9 +24,9 @@ const routes = [
     component: OngProfile,
   },
   {
-    path: '/usuario-perfil',
-    name: 'UserProfile',
-    component: UserProfile,
+    path: '/petlover',
+    name: 'UserPage',
+    component: UserPage,
   },
   {
     path: '/ongs',

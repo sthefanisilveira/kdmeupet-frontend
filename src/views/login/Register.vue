@@ -2,8 +2,8 @@
   <div class="register">
     <section class="bg-credentials">
       <div class="credentials-content">
-        <h1>Kd Meu Pet</h1>
-        <p>Seu novo bichinho a um clique de você.</p>
+        <h1>Cadê meu Pet?</h1>
+        <p>Seu bichinho a um clique!</p>
       </div>
     </section>
 
@@ -11,9 +11,15 @@
       <div class="bg-formContent">
         <h1>Cadastre-se!</h1>
       <form>
+
+        <label for="" class="required">Qual é seu perfil?</label> <br>
+        <input type="radio" value="1" name="ong">Sou Ong
+        <input type="radio" value="2" name="pet_lover">Quero adotar
+        <br> <br>
+
+
         <label for="">Nome:</label> <br>
-        <input type="text"
-              requrired>
+        <input type="text" requrired>
 
         <!-- <div class="form-valid--error">
           <p>O campo nome é obrigatório</p>
@@ -54,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .register {
   display: flex;
 }
@@ -139,7 +145,7 @@ label {
 	font-weight: bold;
 }
 
-label::after {
+.required::after {
 	content: '*';
 	padding-left: 5px;
 	color: #e74c3c;

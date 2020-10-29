@@ -52,31 +52,15 @@
         </div>
       </div>
     </div>
-
-     <b-modal
-            v-model="isComponentModalActive"
-            has-modal-card
-            trap-focus
-            :destroy-on-hide="false"
-            aria-role="dialog"
-            aria-modal>
-            <template #default="props">
-                <modal-form v-bind="formProps" @close="props.close"></modal-form>
-            </template>
-        </b-modal>
   </div>
 </template>
 
 <script>
 
 import axios from 'axios';
-import UserModalAdotePet from './UserModalAdotePet.vue';
 
 export default {
-  name: "UserPets",
-  components: {
-    UserModalAdotePet,
-  },
+  name: "UserPetsLove",
   data() {
     return {
       isComponentModalActive: false,
@@ -163,7 +147,6 @@ export default {
 .user-pets {
   padding: 10px;
   width: 85vw;
-  /* border: 2px solid purple; */
 }
 
 .button {
