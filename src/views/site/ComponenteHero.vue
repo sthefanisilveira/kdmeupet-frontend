@@ -25,7 +25,7 @@ export default {
 <style>
 .about {
   background: #eee;
-  height: 40vh;
+  height: 100%;
   width: 100vw;
 }
 

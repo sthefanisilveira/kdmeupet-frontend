@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .login {
   display: flex;
 }
@@ -128,7 +128,7 @@ label {
 	font-weight: bold;
 }
 
-label::after {
+.required::after {
 	content: '*';
 	padding-left: 5px;
 	color: #e74c3c;

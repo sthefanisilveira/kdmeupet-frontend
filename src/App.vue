@@ -22,7 +22,7 @@ export default {
 
 <style>
   * {
-    margin: 0;    
+    margin: 0;
   }
 
   #app {
