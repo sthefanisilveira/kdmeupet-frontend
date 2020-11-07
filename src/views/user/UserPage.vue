@@ -1,5 +1,6 @@
 <template>
   <div class="user-admin">
+    <router-view></router-view>
     <UserMenu />
     <UserProfile  v-if="perfil"/>
     <UserPetsLove v-if="love" />
@@ -8,7 +9,7 @@
 
 <script>
 import UserMenu from './UserMenu';
-import UserProfile from './UserProfile';
+import UserProfile from './UserProfile.vue';
 import UserPetsLove from './UserPetsLove';
 
 export default {

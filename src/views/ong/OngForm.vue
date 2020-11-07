@@ -2,7 +2,7 @@
   <div class="ong-profile">
     <div class="columns">
       <div class="column is-12">
-        <h1>Cadastro da Ong</h1>
+        <h1>Cadastrar um animal:</h1>
       </div>
     </div>
 

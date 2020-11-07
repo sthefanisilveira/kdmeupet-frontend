@@ -4,6 +4,7 @@
       <div class="column is-12">
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul>
+            <li><a href="/petlover">Home</a></li>
             <li class="is-active"><a href="#" aria-current="page">Perfil</a></li>
           </ul>
         </nav>

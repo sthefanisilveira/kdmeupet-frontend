@@ -8,9 +8,11 @@
     </div>
     <!-- Home, pets, recursos, editar perfil, notificações -->
     <ul class="user-itens">
-      <li v-if="isProfile"> Meu Perfil</li>
-      <li v-if="isPetLove">Pets Favoritos</li>
-      <li><a href="/notifications">Notificações</a></li>
+      <!-- <li v-if="isProfile"><a href="/usuario-perfil"> Meu Perfil </a></li>
+      <li v-if="isPetLove">Pets Favoritos</li> -->
+      <li><a href="/usuario-perfil">Meu perfil</a></li>
+      <li><a href="/petlover">Pets favoritos</a></li>
+      <li><a href="/user-notificacoes">Notificações</a></li>
     </ul>
   </aside>
 </template>
@@ -18,12 +20,12 @@
 <script>
 export default {
   name: 'UserMenu',
-  data() {
-    return {
-      isProfile: true,
-      isPetLove: true,
-    }
-  }
+  // data() {
+  //   return {
+  //     isProfile: true,
+  //     isPetLove: true,
+  //   }
+  // }
 }
 </script>
 
