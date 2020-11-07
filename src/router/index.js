@@ -7,8 +7,16 @@ import Login from '../views/login/Login.vue';
 import Register from '../views/login/Register.vue';
 import InfoPage from '../views/animais/InfoPage.vue';
 import InfoPageOng from '../views/ong/InfoPageOng.vue';
+
+import OngPage from '@/views/ong/OngPage.vue';
 import OngProfile from '@/views/ong/OngProfile.vue';
+import OngPets from '@/views/ong/OngPets.vue';
+import OngNotifications from '@/views/ong/OngNotifications.vue';
+import OngRecursos from '@/views/ong/OngResources.vue';
+
 import UserPage from '@/views/user/UserPage.vue';
+import UserProfile from '@/views/user/UserProfile.vue';
+import UserNotifications from '@/views/user/UserNotifications.vue';
 
 Vue.use(VueRouter);
 
@@ -19,9 +27,9 @@ const routes = [
     component: Hero,
   },
   {
-    path: '/ong-perfil',
-    name: 'OngProfile',
-    component: OngProfile,
+    path: '/ong',
+    name: 'OngPage',
+    component: OngPage,
   },
   {
     path: '/petlover',
@@ -29,7 +37,7 @@ const routes = [
     component: UserPage,
   },
   {
-    path: '/ongs',
+    path: '/ongs-listagem',
     name: 'Ong',
     component: Ong,
   },
@@ -57,6 +65,36 @@ const routes = [
     path: '/info-page-ong',
     name: 'InfoPageOng',
     component: InfoPageOng,
+  },
+  {
+    path: '/usuario-perfil',
+    name: 'UserProfile',
+    component: UserProfile,
+  },
+  {
+    path: '/ong-perfil',
+    name: 'OngProfile',
+    component: OngProfile,
+  },
+  {
+    path: '/ong-pets',
+    name: 'OngPets',
+    component: OngPets,
+  },
+  {
+    path: '/ong-notificacoes',
+    name: 'OngNotifications',
+    component: OngNotifications,
+  },
+  {
+    path: '/ong-recursos',
+    name: 'OngRecursos',
+    component: OngRecursos,
+  },
+  {
+    path: '/user-notificacoes',
+    name: 'UserNotifications',
+    component: UserNotifications,
   }
 ];
 

@@ -1,10 +1,10 @@
 <template>
-  <div class="user-pets">
+  <div class="ong-pets">
     <div class="columns">
       <div class="column is-12">
         <nav class="breadcrumb" aria-label="breadcrumbs">
           <ul>
-            <li><a href="#">Perfil</a></li>
+            <li><a href="/ong">Home</a></li>
             <li class="is-active"><a href="#" aria-current="page">Pets Love</a></li>
           </ul>
         </nav>
@@ -12,8 +12,15 @@
     </div>
 
     <div class="columns">
-      <div class="column is-12">
-        <h1>Pets que amei</h1>
+      <div class="column is-11">
+        <h1>Pets cadastrados</h1>
+      </div>
+      <div class="column is-1">
+        <button
+              class="button is-primary"
+              @click="unlikePet">
+              <i class="fas fa-plus">  </i>
+        </button> 
       </div>
     </div>
 
@@ -38,45 +45,34 @@
             </div>
           </div>
           <footer class="card-footer">
-            <button
+            <!-- <button
               class="button is-primary"
               @click="isComponentModalActive">
               <i class="fas fa-heart"></i>
-            </button>
+            </button> -->
             <button
               class="button is-primary"
               @click="unlikePet">
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-trash">  </i>
+            </button> 
+            <button
+              class="button is-primary"
+              @click="unlikePet">
+              <i class="fas fa-edit"> </i>
             </button>
           </footer>
         </div>
       </div>
     </div>
-
-     <b-modal
-            v-model="isComponentModalActive"
-            has-modal-card
-            trap-focus
-            :destroy-on-hide="false"
-            aria-role="dialog"
-            aria-modal>
-            <template #default="props">
-                <modal-form v-bind="formProps" @close="props.close"></modal-form>
-            </template>
-        </b-modal>
   </div>
 </template>
 
 <script>
 
 import axios from 'axios';
-import UserModalAdotePet from './UserModalAdotePet.vue';
 
 export default {
-  name: "UserPets",
-  components: {
-    UserModalAdotePet,
-  },
+  name: 'OngPets',
   data() {
     return {
       isComponentModalActive: false,
@@ -91,31 +87,31 @@ export default {
           id: 2,
           photo: '',
           name: 'Juvenal',
-          ong: 'Quatro Patas'
+          ong: 'Abrigo Animal'
         },
         {
           id: 3,
            photo: '',
           name: 'Tobi',
-          ong: 'Ong São Franscisco',
+          ong: 'Abrigo Animal',
         },
         {
           id: 4,
            photo: '',
           name: 'Caxias',
-          ong: 'Ong São Judas',
+          ong: 'Abrigo Animal',
         },
         {
           id: 5,
           photo: '',
           name: 'Bernardo',
-          ong: '4 patas',
+          ong: 'Abrigo Animal',
         },
-        {
+         {
           id: 6,
           photo: '',
           name: 'James',
-          ong: '4 patas',
+          ong: 'Abrigo Animal',
         },
       ],
     };
@@ -160,10 +156,9 @@ export default {
 </script>
 
 <style scoped>
-.user-pets {
+.ong-pets {
   padding: 10px;
   width: 85vw;
-  /* border: 2px solid purple; */
 }
 
 .button {

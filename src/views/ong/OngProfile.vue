@@ -1,26 +1,53 @@
 <template>
-  <div class="ong-admin">
-    <OngMenu />
-    <OngForm />
-  </div>
+  <div class="ong-profile">
+     <div class="columns">
+      <div class="column is-12">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li><a href="/ong">Home</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Meu perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column is-2">
+        <img
+          src="https://randomuser.me/api/portraits/lego/6.jpg" alt="">
+        </div>
+        <div class="column is-4">
+          <h1>Abrigo Animal</h1>
+          <p>Rua Agenor da Silva, 98</p>
+          <p>Vila Nova</p>
+          <p>Joinville - SC</p>
+          <p>89182-910</p>
+          <button class="button is-link">
+            <i class="fas fa-edit"> </i> Editar
+          </button>
+        </div>
+      </div>
+      <hr>
+
+
+    </div>
 </template>
 
 <script>
-import OngMenu from './OngMenu.vue';
-import OngForm from './OngForm.vue';
 
 export default {
   name: 'OngProfile',
-  components: {
-    OngMenu,
-    OngForm,
-  },
 }
 </script>
 
 <style>
-.ong-admin {
-  display: flex;
+.ong-profile {
+  padding: 10px;
+  width: 85vw;
 }
 
+.ong-profile h1 {
+  text-align: left;
+  font-size: 2em;
+}
 </style>
