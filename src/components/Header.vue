@@ -9,6 +9,7 @@
                 <li><a href="/animais">Adote</a></li>
                 <li><a href="/ongs">ONGs</a></li>
                 <li><a href="/cadastro">Entrar</a></li>
+                <li><a href="/petlover">Minha Conta</a></li>
             </ul>
 
         </header>
@@ -77,7 +78,7 @@ header {
 
 .header-menu li a:hover {
   opacity: 1;
-  width: 30px;  
+  width: 30px;
   color: #FF6B6B;
 }
 
