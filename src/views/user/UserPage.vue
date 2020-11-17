@@ -1,16 +1,17 @@
 <template>
   <div class="user-admin">
-    <router-view></router-view>
-    <UserMenu />
-    <UserProfile  v-if="perfil"/>
-    <UserPetsLove v-if="love" />
-  </div>
+    <UserMenu @set-link="changeComponent"/>
+    <keep-alive>
+      <component :is="itemAtivo"> </component>
+    </keep-alive>
+   </div>
 </template>
 
 <script>
 import UserMenu from './UserMenu';
 import UserProfile from './UserProfile.vue';
 import UserPetsLove from './UserPetsLove';
+import UserNotifications from './UserNotifications';
 
 export default {
   name: 'UserPage',
@@ -18,13 +19,24 @@ export default {
     UserMenu,
     UserPetsLove,
     UserProfile,
+    UserNotifications,
   },
   data() {
     return {
-      perfil: false,
-      love: true,
-    }
-  }
+      itemAtivo: 'UserProfile',
+    };
+  },
+  methods: {
+    changeComponent(link) {
+      if (link === 'profile') {
+        this.itemAtivo = 'UserProfile';
+      } else if (link === 'petLover') {
+        this.itemAtivo = 'UserPetsLove';
+      } else {
+        this.itemAtivo = 'UserNotifications';
+      }
+    },
+  },
 }
 </script>
 

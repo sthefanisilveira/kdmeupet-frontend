@@ -6,13 +6,16 @@
         alt="">
       <span> Olá, Sarah!</span>
     </div>
-    <!-- Home, pets, recursos, editar perfil, notificações -->
     <ul class="user-itens">
-      <!-- <li v-if="isProfile"><a href="/usuario-perfil"> Meu Perfil </a></li>
-      <li v-if="isPetLove">Pets Favoritos</li> -->
-      <li><a href="/usuario-perfil">Meu perfil</a></li>
-      <li><a href="/petlover">Pets favoritos</a></li>
-      <li><a href="/user-notificacoes">Notificações</a></li>
+      <li @click="setUrl('profile')" >
+         Meu perfil
+      </li>
+      <li @click="setUrl('petLover')">
+          Pets favoritos
+      </li>
+      <li @click="setUrl('notifications')">
+          Notificações
+      </li>
     </ul>
   </aside>
 </template>
@@ -20,13 +23,12 @@
 <script>
 export default {
   name: 'UserMenu',
-  // data() {
-  //   return {
-  //     isProfile: true,
-  //     isPetLove: true,
-  //   }
-  // }
-}
+  methods: {
+    setUrl(itemSelecionado) {
+      this.$emit('set-link', itemSelecionado);
+    },
+  }
+};
 </script>
 
 <style>
@@ -38,8 +40,15 @@ export default {
   padding: 30px;
 }
 
+.user-itens li:hover {
+  cursor: pointer;
+  background: #7957d5;
+
+}
+
 .user-itens li a {
-  color: #eee
+  color: #eee;
+  cursor: pointer;
 }
 
 .profile-thumbs {
