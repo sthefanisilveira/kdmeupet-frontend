@@ -11,20 +11,25 @@
       <div class="bg-formContent">
         <h1>Login</h1>
 
-      <form>
-        <label for="">Email:</label><br>
-        <input type="email"
-              required>
+      <form @submit.prevent="makeLogin">
+        <label for="email">E-mail:</label><br>
+        <input 
+					type="email"
+					v-model="user.email"
+          class="form-control"
+          required>
         <br><br>
 
-        <label for="">Senha:</label><br>
+        <label for="password">Senha:</label><br>
         <input type="password"
               minlength="6"
               maxlength="24"
+							v-model="user.password"
+            	class="form-control"
               required> <br><br>
 
         <div class="center-content">
-          <button id="js-submitItem">Salvar</button>
+          <button id="js-submitItem">Fazer login</button>
         </div>
 
       </form>
@@ -39,8 +44,26 @@
 
 <script>
 export default {
-  name: 'Login',
-}
+	name: 'Login',
+	data() {
+		return {
+			user: {}
+		};
+	},
+	methods: {
+		makeLogin() {
+			const url = "auth/usuario/login";
+			this.$http.post(url, this.user)
+			.then(response => {
+				console.log(response.data);
+				localStorage.setItem('token', response.data.token);
+				this.$router.push({ name: 'UserPage'});
+			}).catch(error => {
+				console.log(error);
+			});
+		},
+	},
+};
 </script>
 
 <style scoped>

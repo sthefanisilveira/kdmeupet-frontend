@@ -1,6 +1,12 @@
 <template>
   <div class="adote-page">
-    <h1>Animais para adoção</h1>
+    <div class="adote-title">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <h1>Animais para adoção</h1>
+      </div>
+    </div>
+    </div>
     <Pesquisa />
     <Card />
   </div>
@@ -22,5 +28,9 @@ export default {
 <style>
 .adote-page {
   padding-top: 30px;
+}
+
+.adote-title h1 {
+  text-align: center;
 }
 </style>

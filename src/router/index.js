@@ -2,10 +2,10 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Hero from '../views/site/HeroPage.vue';
 import Ong from '../views/ong/Ong.vue';
-import Adote from '../views/animais/AdotePage.vue';
+import Adote from '@/views/animais/AdotePage.vue';
 import Login from '../views/login/Login.vue';
 import Register from '../views/login/Register.vue';
-import InfoPage from '../views/animais/InfoPage.vue';
+import InfoPage from '@/views/animais/InfoPage.vue';
 import InfoPageOng from '../views/ong/InfoPageOng.vue';
 
 import OngPage from '@/views/ong/OngPage.vue';
@@ -42,7 +42,7 @@ const routes = [
     component: Ong,
   },
   {
-    path: '/animais',
+    path: '/adote',
     name: 'Adote',
     component: Adote,
   },

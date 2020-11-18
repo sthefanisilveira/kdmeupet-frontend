@@ -1,6 +1,12 @@
 <template>
   <div class="info-page">
-    <h1>Mais informações</h1>
+    <div class="adote-title">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <h1>Mais informações</h1>
+      </div>
+    </div>
+    </div>
     <Animal />
     <Ong />
     <Animais />
@@ -8,9 +14,9 @@
 </template>
 
 <script>
-import Animal from "./ComponenteAnimal";
-import Ong from "./ComponenteOng";
-import Animais from "./ComponenteAnimaisOng";
+import Animal from './ComponenteAnimal';
+import Ong from './ComponenteOng';
+import Animais from './ComponenteAnimaisOng';
 
 export default {
   name: "InfoPage",
