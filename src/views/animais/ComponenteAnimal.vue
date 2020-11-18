@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: "ComponenteAnimal",
+  name: 'ComponenteAnimal',
 };
 </script>
 

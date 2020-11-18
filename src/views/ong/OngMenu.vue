@@ -6,12 +6,19 @@
         alt="">
       <span> Olá, Abrigo Animal!</span>
     </div>
-    <!-- Home, pets, recursos, editar perfil, notificações -->
     <ul class="ong-itens">
-      <li><a href="/ong-perfil"> Meu Perfil </a></li>
-      <li><a href="/ong-pets"> Pets </a></li>
-      <li><a href="/ong-recursos">Recursos</a></li>
-      <li><a href="/ong-notificacoes"> Notificações </a></li>
+      <li @click="setUrl('profile')" >
+         Meu perfil
+      </li>
+      <li @click="setUrl('pets')">
+          Pets
+      </li>
+      <li @click="setUrl('resources')">
+          Recursos
+      </li>
+      <li @click="setUrl('notifications')">
+          Notificações
+      </li>
     </ul>
   </aside>
 </template>
@@ -19,7 +26,12 @@
 <script>
 export default {
   name: 'OngMenu',
-}
+  methods: {
+    setUrl(itemSelecionado) {
+      this.$emit('set-link', itemSelecionado);
+    },
+  }
+};
 </script>
 
 <style>
@@ -31,8 +43,15 @@ export default {
   padding: 30px;
 }
 
+.ong-itens li:hover {
+  cursor: pointer;
+  background: #7957d5;
+
+}
+
 .ong-itens li a {
-  color: #eee
+  color: #eee;
+  cursor: pointer;
 }
 
 .profile-thumbs {

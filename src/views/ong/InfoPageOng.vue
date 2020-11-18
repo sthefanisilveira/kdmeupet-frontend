@@ -1,6 +1,13 @@
 <template>
   <div class="info-page-ong">
-    <h1>Mais informações</h1>
+    <div class="adote-title">
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half">
+        <h1>Mais informações</h1>
+      </div>
+    </div>
+    </div>
+    
     <Ong />
     <Apoio />
     <Animais />

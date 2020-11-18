@@ -41,17 +41,18 @@
             <button
               class="button is-primary"
               @click="isComponentModalActive">
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-home"></i>
             </button>
             <button
               class="button is-primary"
               @click="unlikePet">
-              <i class="fas fa-heart"></i>
+              <i class="fas fa-heart-broken"></i>
             </button>
           </footer>
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 

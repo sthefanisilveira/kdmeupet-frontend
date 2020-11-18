@@ -1,9 +1,15 @@
 <template>
   <div class="card-dog">
-    <div class="container">
-      <img src="../../assets/dog.jpg" width="244" height="151" />
+    <div class="container" 
+      v-for="pet in pets"
+      :key="pet.id">
+      <img
+        :src="pet.photo"
+        :alt="pet.name"
+        width="244" 
+        height="151" />
       <div class="card-body">
-        <h1>Boris</h1>
+        <h1> {{ pet.name }} </h1>
         <p>
           Eu sou um cachorro muito dócil e adoraria viver em um novo lar
           definitivo. <br />
@@ -14,61 +20,9 @@
         <h3>Estou te esperando há:</h3>
         <p>2 anos</p>
         <div class="about-action">
-          <button @click="goToInfo">Me adote</button>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <img src="../../assets/dog.jpg" width="244" height="151" />
-      <div class="card-body">
-        <h1>Boris</h1>
-        <p>
-          Eu sou um cachorro muito dócil e adoraria viver em um novo lar
-          definitivo. <br />
-          Gosto de crianças e amo brincar.
-        </p>
-      </div>
-      <div class="card-date">
-        <h3>Estou te esperando há:</h3>
-        <p>2 anos</p>
-        <div class="about-action">
-          <button @click="goToInfo">Me adote</button>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <img src="../../assets/dog.jpg" width="244" height="151" />
-      <div class="card-body">
-        <h1>Boris</h1>
-        <p>
-          Eu sou um cachorro muito dócil e adoraria viver em um novo lar
-          definitivo. <br />
-          Gosto de crianças e amo brincar.
-        </p>
-      </div>
-      <div class="card-date">
-        <h3>Estou te esperando há:</h3>
-        <p>2 anos</p>
-        <div class="about-action">
-          <button @click="goToInfo">Me adote</button>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <img src="../../assets/dog.jpg" width="244" height="151" />
-      <div class="card-body">
-        <h1>Boris</h1>
-        <p>
-          Eu sou um cachorro muito dócil e adoraria viver em um novo lar
-          definitivo. <br />
-          Gosto de crianças e amo brincar.
-        </p>
-      </div>
-      <div class="card-date">
-        <h3>Estou te esperando há:</h3>
-        <p>2 anos</p>
-        <div class="about-action">
-          <button @click="goToInfo">Me adote</button>
+          <button class="button is-link" @click="goToInfo">
+            Me adote
+          </button>
         </div>
       </div>
     </div>
@@ -76,11 +30,69 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: "Card",
+  data() {
+    return {
+      isComponentModalActive: false,
+      pets: [
+        {
+          id: 1,
+          photo: '',
+          name: 'Boris',
+        },
+         {
+          id: 2,
+          photo: '',
+          name: 'Juvenal',
+        },
+        {
+          id: 3,
+           photo: '',
+          name: 'Tobi',
+        },
+        {
+          id: 4,
+           photo: '',
+          name: 'Caxias',
+        },
+        {
+          id: 5,
+          photo: '',
+          name: 'Bernardo',
+        },
+         {
+          id: 6,
+          photo: '',
+          name: 'James',
+        },
+      ],
+    };
+  },
+  created() {
+    this.getPetsLove();
+  },
   methods: {
     goToInfo() {
       this.$router.push("/info-page");
+    },
+    getPetsLove() {
+      const url = 'https://dog.ceo/api/breeds/image/random';
+      axios.get(url)
+        .then(response => {
+          console.log(response.data.message)
+           this.setImages(response)
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    },
+    setImages(response) {
+      for (let i = 0; i < this.pets.length; i++) {
+        this.pets[i].photo = response.data.message;
+      }
     },
   },
 };
