@@ -1,8 +1,10 @@
 <template>
   <div class="numeros">
     <div class="container-numeros">
-      <h1>+ 000 pets adotados</h1>
-      <h1>+ 000 ONGs ajudadas</h1>
+      <h1>+ 30 pets adotados</h1>
+    </div>
+    <div class="container-numeros">
+      <h1>+ 10 ONGs ajudadas</h1>
     </div>
   </div>
 </template>
@@ -15,15 +17,12 @@ export default {
 
 <style>
 .numeros {
+  padding: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   background: #eee;
-  height: 20vh;
-  width: 100vw;
 }
 
-.container-numeros {
-  display: flex;
-  align-items: center;
-}
 </style>

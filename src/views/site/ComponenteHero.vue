@@ -2,7 +2,7 @@
 <template>
   <div class="about">
     <div class="about-container">
-    <p>Você quer conhecer os pets disponíveis para adoção da sua região mas não sabe onde procurar? <br> Nossa comunidade te ajudará nessa busca!</p>
+    <p>Você quer conhecer os pets disponíveis para adoção da sua região mas não sabe onde procurar? <br> Nossa comunidade te ajudará nessa busca!</p> <br>
     <div class="about-action">
       <button @click="goToRegister">Cadastre-se</button>
     </div>
@@ -27,10 +27,11 @@ export default {
   background: #eee;
   height: 100%;
   width: 100vw;
+  padding: 30px;
 }
 
 .about-container {
-  padding-top: 30px;
+  text-align: center;
 }
 
 .about-container p {
@@ -51,8 +52,8 @@ export default {
 }
 
 .about button:hover {
-  background: #DADAD9;
-  color: var(--color-text);
+  background: #2A9D8F;
+  color: #fff;
   width: 220px;
   height: 40px;
   border-radius: 20px;

@@ -4,8 +4,8 @@
       <div class="header-brand">
         <a href="/"> <img src="../assets/logo.png" alt="logo KdMeuPet" /></a>
       </div>
-      <HeaderLogout v-if="userLoggedIn"/>
-      <HeaderLogin v-else/>
+      <HeaderLogin v-if="userLoggedIn"/>
+      <HeaderLogout v-else/>
     </header>
   </div>
 </template>
@@ -22,7 +22,8 @@ export default {
   },
   computed: {
     userLoggedIn() {
-      return Boolean(localStorage.getItem('token'));
+      console.log(this.$store.state.user.name);
+      return Boolean(this.$store.state.token);
     }
   },
 };

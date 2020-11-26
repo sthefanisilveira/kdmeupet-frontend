@@ -25,6 +25,23 @@ export default {
     Ong,
     Animais,
   },
+  data(){
+    return {
+      animals: [
+
+      ]
+    };
+  },
+  created() {
+    this.getAnimals();
+  },
+  methods: {
+    getAnimals() {
+      if(!this.$store.state.token) {
+        this.$router.push({ name: login });
+      };
+    },
+  },
 };
 </script>
 

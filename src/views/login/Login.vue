@@ -55,8 +55,8 @@ export default {
 			const url = "auth/usuario/login";
 			this.$http.post(url, this.user)
 			.then(response => {
-				console.log(response.data);
-				localStorage.setItem('token', response.data.token);
+				this.$store.state.token = response.data.token;
+				this.$store.state.user = response.data.user;
 				this.$router.push({ name: 'UserPage'});
 			}).catch(error => {
 				console.log(error);

@@ -6,6 +6,7 @@ import router from './router';
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import apiUrl from '@/services/Config.js';
+import provedor from '@/provedor';
 
 Vue.config.productionTip = false;
 Vue.use(Buefy);
@@ -14,5 +15,6 @@ Vue.prototype.$http = apiUrl;
 
 new Vue({
   router,
+  store: provedor,
   render: (h) => h(App),
 }).$mount('#app');

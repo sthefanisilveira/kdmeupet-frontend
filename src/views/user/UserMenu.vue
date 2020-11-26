@@ -4,7 +4,11 @@
       <img
         src="https://randomuser.me/api/portraits/women/24.jpg"
         alt="">
-      <span> Olá, Sarah!</span>
+      <!-- <span> Olá, Sandra!</span> -->
+      <ul v-for="user in users" :key="user.id"> 
+        <li> {{users.name}} </li>
+      </ul>
+
     </div>
     <ul class="user-itens">
       <li @click="setUrl('profile')" >
@@ -21,13 +25,46 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'UserMenu',
+  data() {
+    return {
+      users: {
+        name: '',
+      },
+    };
+  },
+  created() {
+    this.users.name = this.$store.state.user.name;
+    console.log(this.$store.state.user.name, 'user');
+  },
+  
   methods: {
     setUrl(itemSelecionado) {
       this.$emit('set-link', itemSelecionado);
     },
-  }
+    // getUser(){
+    //   axios.defaults.headers.common = {
+    //   ...axios.defaults.headers.common,
+    //   'Access-Control-Allow-Origin': 'http://localhost:3000',
+    //   "Content-Type": 'application/json',
+    //   };
+
+    //   const url = "api/usuario";
+
+    //   // this.$http.get(url)
+    //   console.log(axios);
+    //   axios.get('http://localhost:3000/api/usuario')
+		// 	.then(response => {
+    //     console.log(response.data);
+    //     this.users = response.data;
+		// 	}).catch(error => {
+		// 		console.log(error);
+		// 	});
+    // },
+  },
 };
 </script>
 
