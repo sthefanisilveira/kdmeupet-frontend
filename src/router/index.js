@@ -18,6 +18,8 @@ import UserPage from '@/views/user/UserPage.vue';
 import UserProfile from '@/views/user/UserProfile.vue';
 import UserNotifications from '@/views/user/UserNotifications.vue';
 
+import provedor from '@/provedor';
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -25,6 +27,9 @@ const routes = [
     path: '/',
     name: 'Hero',
     component: Hero,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/ong',
@@ -40,21 +45,33 @@ const routes = [
     path: '/ongs-listagem',
     name: 'Ong',
     component: Ong,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/adote',
     name: 'Adote',
     component: Adote,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/login',
-    name: 'Login',
+    name: 'login',
     component: Login,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/cadastro',
     name: 'Register',
     component: Register,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/info-page',
@@ -103,5 +120,12 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+router.beforeEach(( routeTo, routeFrom, next) => {
+  if(!routeTo.meta.publica && !provedor.state.token) {
+    return next( { path: '/login' });
+  }
+  next();
+})
 
 export default router;

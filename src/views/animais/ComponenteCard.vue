@@ -38,40 +38,41 @@ export default {
     return {
       isComponentModalActive: false,
       pets: [
-        {
-          id: 1,
-          photo: '',
-          name: 'Boris',
-        },
-         {
-          id: 2,
-          photo: '',
-          name: 'Juvenal',
-        },
-        {
-          id: 3,
-           photo: '',
-          name: 'Tobi',
-        },
-        {
-          id: 4,
-           photo: '',
-          name: 'Caxias',
-        },
-        {
-          id: 5,
-          photo: '',
-          name: 'Bernardo',
-        },
-         {
-          id: 6,
-          photo: '',
-          name: 'James',
-        },
+        // {
+        //   id: 1,
+        //   photo: '',
+        //   name: 'Boris',
+        // },
+        //  {
+        //   id: 2,
+        //   photo: '',
+        //   name: 'Juvenal',
+        // },
+        // {
+        //   id: 3,
+        //    photo: '',
+        //   name: 'Tobi',
+        // },
+        // {
+        //   id: 4,
+        //    photo: '',
+        //   name: 'Caxias',
+        // },
+        // {
+        //   id: 5,
+        //   photo: '',
+        //   name: 'Bernardo',
+        // },
+        //  {
+        //   id: 6,
+        //   photo: '',
+        //   name: 'James',
+        // },
       ],
     };
   },
   created() {
+    console.log(this.$store.state.token);
     this.getPetsLove();
   },
   methods: {
@@ -79,15 +80,36 @@ export default {
       this.$router.push("/info-page");
     },
     getPetsLove() {
-      const url = 'https://dog.ceo/api/breeds/image/random';
-      axios.get(url)
+      // const url = 'https://dog.ceo/api/breeds/image/random';
+      // axios.get(url)
+      //   .then(response => {
+      //     console.log(response.data.message)
+      //      this.setImages(response)
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   })
+      const url = 'http://localhost:3000/animal';
+
+      axios.defaults.headers.common = {
+      ...axios.defaults.headers.common,
+      'Access-Control-Allow-Origin': 'http://localhost:3000',
+      "Content-Type": 'application/json',
+      };
+
+      axios.get(url, {
+        headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                'Access-Control-Request-Method': 'GET',
+                'Accept':'*'
+            }
+      })
         .then(response => {
-          console.log(response.data.message)
-           this.setImages(response)
+          console.log(response.data)
         })
-        .catch(err => {
-          console.log(err);
-        })
+          .catch(error => {
+            console.log(error);
+          })
     },
     setImages(response) {
       for (let i = 0; i < this.pets.length; i++) {

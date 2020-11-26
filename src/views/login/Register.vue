@@ -11,7 +11,68 @@
       <div class="bg-formContent">
         <h1>Cadastre-se!</h1>
 
-        <form @submit.prevent="submitForm">
+        <div>
+          <div class="profile-type">
+            <label for="" class="required">Qual é o seu perfil?</label> <br /><br />
+            <button @click="showForm('ong')">
+              Sou Ong
+            </button>
+
+            <button @click="showForm('profile')">
+              Quero adotar
+            </button>
+            
+          </div><br />
+        </div>
+
+        {{isOng}}
+
+        <div v-if="showFormOng">
+          <form @submit.prevent="submitForm">
+          <br />
+
+          <label for="name">Nome:</label> <br />
+          <input
+            type="text"
+            v-model="user.name"
+            class="form-control"
+            requrired
+          />
+
+          <!-- <div class="form-valid--error">
+          <p>O campo nome é obrigatório</p>
+        </div> -->
+
+          <label for="email">Email da Ong:</label><br />
+          <input
+            type="email"
+            v-model="user.email"
+            class="form-control"
+            required
+          />
+          <br /><br />
+
+          <label for="password">Senha:</label><br />
+          <input
+            type="password"
+            v-model="user.password"
+            class="form-control"
+            minlength="6"
+            maxlength="24"
+            required
+          />
+          <br /><br />
+
+          <!-- <label for="">Confirme sua senha:</label><br />
+          <input type="password" minlength="6" maxlength="24" /><br /><br /> -->
+
+          <div class="center-content">
+            <button id="js-submitItem" @click="submitForm">Salvar ong</button>
+          </div>
+        </form>
+        </div>
+        <div v-if="showFormProfile">
+          <form @submit.prevent="submitForm">
           <br />
           <!-- <div class="profile-type">
             <label for="" class="required">Qual é o seu perfil?</label> <br /><br />
@@ -59,9 +120,10 @@
           <input type="password" minlength="6" maxlength="24" /><br /><br /> -->
 
           <div class="center-content">
-            <button id="js-submitItem" @click="submitForm">Salvar</button>
+            <button id="js-submitItem" @click="submitForm">Salvar pessoa</button>
           </div>
         </form>
+        </div>
         <div class="footer-register">
           Já possui conta? <a href="/login"> Realizar Login</a>
         </div>
@@ -77,6 +139,10 @@ export default {
   name: "Register",
   data() {
     return {
+      isOng: '',
+      typeProfile: '',
+      showFormOng: false,
+      showFormProfile: false,
       user: {
         name: "",
         password: "",
@@ -85,8 +151,32 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      const url = "http://localhost:3000/auth/usuario/cadastro";
+    showForm(type) {
+      if(type === 'ong') {
+        this.typeProfile = type;
+        this.showFormOng = true;
+        this.showFormProfile = false;
+      } else {
+        this.typeProfile = type;
+        this.showFormOng = false;
+        this.showFormProfile = true;
+      }
+      // this.isOng = type;
+      console.log(this.isOng);
+      this.setSelectProfile(type);
+    },
+
+    setSelectProfile(type) {
+      if(type === 'ong') {
+        const url = "http://localhost:3000/auth/ong/cadastro";
+        return url;
+      } else {
+        const url = "http://localhost:3000/auth/usuario/cadastro";
+        return url;
+      }
+    },
+
+    submitForm(type) {
       // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
       axios.defaults.headers.common = {
       ...axios.defaults.headers.common,
@@ -94,17 +184,23 @@ export default {
       "Content-Type": 'application/json',
       };
 
+      console.log(this.typeProfile);
+      const url = this.typeProfile === 'ong' ? "http://localhost:3000/auth/ong/cadastro":"http://localhost:3000/auth/usuario/cadastro";
+
       console.log(axios);
+      // console.log(url);
       const data = {
         email: this.user.email,
         password: this.user.password,
-        name: this.user.name
+        name: this.user.name,
+        typeProfile: this.typeProfile,
       };
 
       axios
         .post(url, data)
         .then((response) => {
           console.log(response.data);
+          console.log('dados salvos', response);
         })
         .catch((error) => {
           console.log(error);

@@ -8,20 +8,20 @@
 
       <div class="Pesquise">
         <img src="../../assets/lupa.png">
-        <h2>Pesquise</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+        <h2><strong>Pesquise</strong></h2>
+        <p>Utilizando-se de filtros, para encontrar um pet, é possível selecionar o tipo do animal (cachorro ou gato), porte, gênero e até mesmo filtrar por animais sociáveis com outros animais ou com crianças.</p>
       </div>
 
       <div class="Compartilhe">
         <img src="../../assets/coracao.png">
-        <h2>Adote</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+        <h2><strong>Adote</strong></h2>
+        <p>Após identificar o animal desejado dentre as características que acredita ser a ideal, o adotante enviará suas informações através da plataforma, preenchendo um formulário.</p>
       </div>
 
       <div class="Encontre">
         <img src="../../assets/doacao.png">
-        <h2>Ajude</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui.</p>
+        <h2><strong>Ajude</strong></h2>
+        <p>Caso o usuário deseja ajudar uma Ong de forma voluntária ou com recursos financeiros próprios, este poderá utilizar da mesma ferramenta de contato, informando o que deseja  ajudar seja de forma recorrente ou única.</p>
       </div>
     </div>
   </div>
@@ -37,11 +37,11 @@ export default {
 .sobre {
   width: 100vw;
   height: 100%;
+  padding: 30px;
 }
 
 .sobre-container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  text-align: center;
 }
 
 .sobre-container-itens {

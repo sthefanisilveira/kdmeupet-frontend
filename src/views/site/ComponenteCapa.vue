@@ -52,8 +52,8 @@ export default {
 }
 
 .cover button:hover {
-  background: #DADAD9;
-  color: var(--color-text);
+  background: #E63946;
+  color: #fff;
   width: 220px;
   height: 40px;
   border-radius: 20px;
