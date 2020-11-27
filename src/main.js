@@ -5,16 +5,16 @@ import App from './App.vue';
 import router from './router';
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-import apiUrl from '@/services/Config.js';
-import provedor from '@/provedor';
+import http from '@/http';
+import store from './store';
 
 Vue.config.productionTip = false;
 Vue.use(Buefy);
-Vue.prototype.$http = apiUrl;
+Vue.prototype.$http = http;
 
 
 new Vue({
   router,
-  store: provedor,
+  store,
   render: (h) => h(App),
 }).$mount('#app');

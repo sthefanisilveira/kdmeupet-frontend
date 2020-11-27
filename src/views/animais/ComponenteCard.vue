@@ -1,12 +1,12 @@
 <template>
   <div class="card-dog">
-    <div class="container" 
+    <div class="container"
       v-for="pet in pets"
       :key="pet.id">
       <img
         :src="pet.photo"
         :alt="pet.name"
-        width="244" 
+        width="244"
         height="151" />
       <div class="card-body">
         <h1> {{ pet.name }} </h1>
@@ -37,42 +37,10 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
-      pets: [
-        // {
-        //   id: 1,
-        //   photo: '',
-        //   name: 'Boris',
-        // },
-        //  {
-        //   id: 2,
-        //   photo: '',
-        //   name: 'Juvenal',
-        // },
-        // {
-        //   id: 3,
-        //    photo: '',
-        //   name: 'Tobi',
-        // },
-        // {
-        //   id: 4,
-        //    photo: '',
-        //   name: 'Caxias',
-        // },
-        // {
-        //   id: 5,
-        //   photo: '',
-        //   name: 'Bernardo',
-        // },
-        //  {
-        //   id: 6,
-        //   photo: '',
-        //   name: 'James',
-        // },
-      ],
+      pets: [],
     };
   },
-  created() {
-    console.log(this.$store.state.token);
+  mounted() {
     this.getPetsLove();
   },
   methods: {
@@ -80,37 +48,18 @@ export default {
       this.$router.push("/info-page");
     },
     getPetsLove() {
-      // const url = 'https://dog.ceo/api/breeds/image/random';
-      // axios.get(url)
-      //   .then(response => {
-      //     console.log(response.data.message)
-      //      this.setImages(response)
-      //   })
-      //   .catch(err => {
-      //     console.log(err);
-      //   })
-      const url = 'http://localhost:3000/animal';
-
-      axios.defaults.headers.common = {
-      ...axios.defaults.headers.common,
-      'Access-Control-Allow-Origin': 'http://localhost:3000',
-      "Content-Type": 'application/json',
-      };
-
-      axios.get(url, {
+      const url = '/api/animal';
+     	this.$http.get(url, {
         headers: {
-                'Access-Control-Allow-Origin': 'http://localhost:3000/',
-                'Access-Control-Request-Method': 'GET',
-                'Accept':'*'
-            }
-      })
-        .then(response => {
-          console.log(response.data)
+          Authorization: `Bearer ${this.$store.state.token}`,
+        }
+      }).then(response => {
+        console.log(response.data)
+      }).catch(error => {
+          console.log(error);
         })
-          .catch(error => {
-            console.log(error);
-          })
     },
+
     setImages(response) {
       for (let i = 0; i < this.pets.length; i++) {
         this.pets[i].photo = response.data.message;

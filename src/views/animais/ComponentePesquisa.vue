@@ -4,33 +4,33 @@
     <div class="columns is-multiline is-mobile is-centered">
       <div class="column is-one-quarter">
         <b-field label="Porte:">
-          <b-checkbox v-model="checkboxGroup" native-value="pequeno">
+          <b-checkbox native-value="pequeno">
             Pequeno
           </b-checkbox>
-          <b-checkbox v-model="checkboxGroup" native-value="medio">
+          <b-checkbox native-value="medio">
             Médio
           </b-checkbox>
-          <b-checkbox v-model="checkboxGroup" native-value="grande">
+          <b-checkbox native-value="grande">
             Grande
           </b-checkbox>
         </b-field>
       </div>
       <div class="column is-one-quarter">
         <b-field label="Tipo:">
-          <b-checkbox v-model="checkboxGroup" native-value="cachorro">
+          <b-checkbox native-value="cachorro">
             Cachorro
           </b-checkbox>
-          <b-checkbox v-model="checkboxGroup" native-value="gato">
+          <b-checkbox native-value="gato">
             Gato
           </b-checkbox>
         </b-field>
       </div>
       <div class="column is-one-quarter">
         <b-field label="Ambiente">
-          <b-checkbox v-model="checkboxGroup" native-value="casa">
+          <b-checkbox native-value="casa">
             Casa
           </b-checkbox>
-          <b-checkbox v-model="checkboxGroup" native-value="apartamento">
+          <b-checkbox native-value="apartamento">
             Apartamento
           </b-checkbox>
         </b-field>

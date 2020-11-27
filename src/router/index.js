@@ -18,7 +18,7 @@ import UserPage from '@/views/user/UserPage.vue';
 import UserProfile from '@/views/user/UserProfile.vue';
 import UserNotifications from '@/views/user/UserNotifications.vue';
 
-import provedor from '@/provedor';
+import store from '../store';
 
 Vue.use(VueRouter);
 
@@ -122,7 +122,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach(( routeTo, routeFrom, next) => {
-  if(!routeTo.meta.publica && !provedor.state.token) {
+  if(!routeTo.meta.publica && !store.state.token) {
     return next( { path: '/login' });
   }
   next();
