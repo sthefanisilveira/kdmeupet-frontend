@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import apiUrl from '@/services/Config.js';
 import provedor from '@/provedor';
+import './services/msgs';
 
 Vue.config.productionTip = false;
 Vue.use(Buefy);

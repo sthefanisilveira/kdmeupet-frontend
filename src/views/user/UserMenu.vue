@@ -1,14 +1,10 @@
 <template>
   <aside class="user-menuLateral">
-    <div class="profile-thumbs">
+    <div class="profile-thumbs" v-for="user in users" :key="user.id">
       <img
         src="https://randomuser.me/api/portraits/women/24.jpg"
         alt="">
-      <!-- <span> Olá, Sandra!</span> -->
-      <ul v-for="user in users" :key="user.id"> 
-        <li> {{users.name}} </li>
-      </ul>
-
+      <span> Olá, {{users.name}}!</span>
     </div>
     <ul class="user-itens">
       <li @click="setUrl('profile')" >
@@ -45,25 +41,6 @@ export default {
     setUrl(itemSelecionado) {
       this.$emit('set-link', itemSelecionado);
     },
-    // getUser(){
-    //   axios.defaults.headers.common = {
-    //   ...axios.defaults.headers.common,
-    //   'Access-Control-Allow-Origin': 'http://localhost:3000',
-    //   "Content-Type": 'application/json',
-    //   };
-
-    //   const url = "api/usuario";
-
-    //   // this.$http.get(url)
-    //   console.log(axios);
-    //   axios.get('http://localhost:3000/api/usuario')
-		// 	.then(response => {
-    //     console.log(response.data);
-    //     this.users = response.data;
-		// 	}).catch(error => {
-		// 		console.log(error);
-		// 	});
-    // },
   },
 };
 </script>
