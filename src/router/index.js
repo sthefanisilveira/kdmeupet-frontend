@@ -35,6 +35,9 @@ const routes = [
     path: '/ong',
     name: 'OngPage',
     component: OngPage,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/petlover',
@@ -45,9 +48,6 @@ const routes = [
     path: '/ongs-listagem',
     name: 'Ong',
     component: Ong,
-    meta: {
-      publica: true
-    }
   },
   {
     path: '/adote',
@@ -92,21 +92,33 @@ const routes = [
     path: '/ong-perfil',
     name: 'OngProfile',
     component: OngProfile,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/ong-pets',
     name: 'OngPets',
     component: OngPets,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/ong-notificacoes',
     name: 'OngNotifications',
     component: OngNotifications,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/ong-recursos',
     name: 'OngRecursos',
     component: OngRecursos,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/user-notificacoes',

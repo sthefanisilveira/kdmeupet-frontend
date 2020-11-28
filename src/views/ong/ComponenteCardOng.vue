@@ -33,28 +33,7 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
-      ongs: [
-        {
-          id: 1,
-          photo: '',
-          name: 'Abrigo Animal',
-        },
-        {
-          id: 2,
-          photo: '',
-          name: 'Quatro Patas',
-        },
-        {
-          id: 3,
-          photo: '',
-          name: 'São Francisco',
-        },
-        {
-          id: 4,
-          photo: '',
-          name: 'CBEA Joinville',
-        },
-      ],
+      ongs: [],
     };
   },
   created() {
@@ -65,30 +44,20 @@ export default {
       this.$router.push("/info-page-ong");
     },
     getOngs() {
-      // this.$apiUrl.get('/ong')
-      // .then(response => {
-      //   this.ongs = response.data;
-      // }).catch(erro => {
-      //   console.log(erro);
-      // })
-
-
-      const url = 'https://dog.ceo/api/breeds/image/random';
-      axios.get(url)
-        .then(response => {
-          console.log(response.data.message)
-           this.setImages(response)
-        })
-        .catch(err => {
-          console.log(err);
-        })
+      const url = '/api/ong';
+     	this.$http.get(url).then(response => {
+        console.log(response.data);
+         this.ongs = response.data
+      }).catch(error => {
+          console.log(error);
+      });
     },
     
-    setImages(response) {
-      for (let i = 0; i < this.ongs.length; i++) {
-        this.ongs[i].photo = response.data.message;
-      }
-    },
+    // setImages(response) {
+    //   for (let i = 0; i < this.ongs.length; i++) {
+    //     this.ongs[i].photo = response.data.message;
+    //   }
+    // },
   },
 };
 </script>
