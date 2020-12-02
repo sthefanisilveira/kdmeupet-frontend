@@ -4,10 +4,8 @@
       v-for="ong in ongs"
       :key="ong.id">
       <img
-        src="https://www.shareicon.net/data/256x256/2016/07/29/803582_heart_512x512.png"
-        :alt="ong.name"
-        width="220"
-        height="100" />
+        src="../../assets/ong-logo.png"
+        :alt="ong.name" />
       <div class="card-body">
         <h1> {{ ong.name }} </h1>
         <p>

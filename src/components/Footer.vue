@@ -2,9 +2,9 @@
     <div>
         <footer>
             <ul class="footer-menu">
-                <li><a href="/animais">Adote</a></li>
-                <li><a href="/ongs">ONGs</a></li>
-                <li><a href="/">Entrar</a></li>
+                <li><a href="/adote">Adote</a></li>
+                <li><a href="/ongs-listagem">ONGs</a></li>
+                <li><a href="/cadastro">Entrar</a></li>
             </ul>
         </footer>
     </div>

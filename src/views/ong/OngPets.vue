@@ -32,7 +32,7 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                src="https://i.pinimg.com/originals/05/11/1b/05111b1369f775d904c7af38777f5601.png"
+                src="../../assets/cao.png"
                 :alt="pet.name" />
             </figure>
           </div>
@@ -45,11 +45,6 @@
             </div>
           </div>
           <footer class="card-footer">
-            <!-- <button
-              class="button is-primary"
-              @click="isComponentModalActive">
-              <i class="fas fa-heart"></i>
-            </button> -->
             <button
               class="button is-danger"
               @click="unlikePet">
@@ -166,6 +161,21 @@ export default {
 .ong-pets {
   padding: 10px;
   width: 85vw;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  text-align: center;
+  width: 250px;
+  height: 100px;
 }
 
 .button {

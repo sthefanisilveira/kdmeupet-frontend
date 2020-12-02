@@ -2,7 +2,7 @@
   <aside class="user-menuLateral">
     <div class="profile-thumbs" v-for="user in users" :key="user.id">
       <img
-        src="https://randomuser.me/api/portraits/women/24.jpg"
+        src="../../assets/user-logo.png"
         alt="">
       <span> Olá, {{users.name}}!</span>
     </div>

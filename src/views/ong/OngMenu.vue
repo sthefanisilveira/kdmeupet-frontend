@@ -2,7 +2,7 @@
   <aside class="ong-menuLateral">
     <div class="profile-thumbs">
       <img
-        src="https://randomuser.me/api/portraits/lego/6.jpg"
+        src="../../assets/ong-logo.png"
         alt="">
       <span> Olá, Abrigo Animal!</span>
     </div>
