@@ -82,7 +82,7 @@
             </b-radio>
             <b-radio v-model="radio" name="pet_lover" native-value="pet_lover">
               Quero adotar
-            </b-radio> 
+            </b-radio>
           </div><br /> -->
 
             <label for="name">Nome:</label> <br />
@@ -116,19 +116,18 @@
               required
             />
             <br /><br />
-
-            <!-- <label for="">Confirme sua senha:</label><br />
-          <input type="password" minlength="6" maxlength="24" /><br /><br /> -->
-
             <div class="center-content">
-              <button class="botao-padrao2" id="js-submitItem" @click="submitForm">
+              <button class="botao-padrao2"
+                id="js-submitItem"
+                 @click="submitForm">
                 Salvar pessoa
               </button>
             </div>
           </form>
         </div>
         <div class="footer-register">
-          Já possui conta? <a href="/login"> Realizar login</a>
+          Já possui conta?
+          <a href="/login"> Realizar login</a>
         </div>
       </div>
     </section>
@@ -164,7 +163,6 @@ export default {
         this.showFormOng = false;
         this.showFormProfile = true;
       }
-      // this.isOng = type;
       console.log(this.isOng);
       this.setSelectProfile(type);
     },
@@ -178,23 +176,19 @@ export default {
         return url;
       }
     },
+    // setData() {
 
+    // },
     submitForm(type) {
-      // axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
       axios.defaults.headers.common = {
         ...axios.defaults.headers.common,
         "Access-Control-Allow-Origin": "http://localhost:3000",
         "Content-Type": "application/json",
       };
-
-      console.log(this.typeProfile);
-      const url =
-        this.typeProfile === "ong"
+      const url = this.typeProfile === "ong"
           ? "http://localhost:3000/auth/ong/cadastro"
           : "http://localhost:3000/auth/usuario/cadastro";
 
-      console.log(axios);
-      // console.log(url);
       const data = {
         email: this.user.email,
         password: this.user.password,
@@ -202,15 +196,23 @@ export default {
         typeProfile: this.typeProfile,
       };
 
-      axios
-        .post(url, data)
+      axios.post(url, data)
         .then((response) => {
           console.log(response.data);
-          console.log("dados salvos", response);
+            this.$store.state.token = response.data.token;
+            this.$store.state.user = response.data.user;
+            if(this.typeProfile === 'ong') {
+              this.$router.push({ name: 'OngPage'});
+            } else {
+              this.$router.push({ name: 'UserPage'});
+            }
         })
-        .catch((error) => {
-          console.log(error);
+        .catch((erro) => {
+          console.log(erro);
         });
+    },
+    setRedirectProfilePage() {
+
     },
   },
 };

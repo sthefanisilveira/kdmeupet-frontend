@@ -20,7 +20,7 @@
               class="button is-primary"
               @click="unlikePet">
               <i class="fas fa-plus">  </i>
-        </button> 
+        </button>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                :src="pet.photo"
+                src="https://i.pinimg.com/originals/05/11/1b/05111b1369f775d904c7af38777f5601.png"
                 :alt="pet.name" />
             </figure>
           </div>
@@ -54,7 +54,7 @@
               class="button is-danger"
               @click="unlikePet">
               <i class="fas fa-trash">  </i>
-            </button> 
+            </button>
             <button
               class="button is-warning"
               @click="unlikePet">

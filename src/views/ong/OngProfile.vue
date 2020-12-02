@@ -17,31 +17,57 @@
           src="https://randomuser.me/api/portraits/lego/6.jpg" alt="">
         </div>
         <div class="column is-4">
-          <h1>Abrigo Animal</h1>
+          <h1>{{users.name}}</h1>
           <p>Rua Agenor da Silva, 98</p>
           <p>Vila Nova</p>
           <p>Joinville - SC</p>
           <p>89182-910</p>
-          <button class="button is-warning">
-            <i class="fas fa-edit"> </i> Editar
+          <button class="button is-warning"
+            @click="setEditForm">
+            <i class="fas fa-edit"> </i> Editar  ajhsiuajsasjaijsasajajiisijaisjasiaijsa {{statusEdit}}
           </button>
         </div>
       </div>
+       <div class="columns" v-if="statusEdit">
+        <div class="column is-12">
+           <h1>Editar</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nemo enim ipsum, fugiat minima totam illo nihil veritatis deleniti qui corporis, sunt praesentium sit ipsa? Cupiditate ullam eligendi expedita tenetur!</p>
+        </div>
+      </div>
       <hr>
-
-
     </div>
 </template>
-
 <script>
 
 export default {
   name: 'OngProfile',
+  data() {
+   return {
+      users: {
+        name: '',
+      },
+      statusEdit: false,
+    };
+  },
+  // computed: {
+  //   showFormEdit() {
+  //     return this.statusEdit = true;
+  //   },
+  // },
+  created() {
+    console.log(this.users);
+    this.users.name = this.$store.state.user.name;
+  },
+  methods: {
+    setEditForm() {
+      console.log(this.statusEdit);
+      this.statusEdit = true;
+    },
+  },
 }
 </script>
 
 <style>
-
 .breadcrumb a {
     -webkit-box-align: center;
     -ms-flex-align: center;

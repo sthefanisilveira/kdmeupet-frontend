@@ -13,7 +13,7 @@
 
       <form @submit.prevent="makeLogin">
         <label for="email">E-mail:</label>
-        <input 
+        <input
 					type="email"
 					v-model="user.email"
           class="form-control"
@@ -55,6 +55,7 @@ export default {
 			const url = "auth/usuario/login";
 			this.$http.post(url, this.user)
 			.then(response => {
+        console.log(response.data);
 				this.$store.state.token = response.data.token;
 				this.$store.state.user = response.data.user;
 				this.$router.push({ name: 'UserPage'});
