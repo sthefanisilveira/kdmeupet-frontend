@@ -3,7 +3,7 @@
     <div class="cover-content">
         <h1>Faça parte da nossa comunidade</h1>
         <div class="cover-content__action">
-           <button @click="goToLogin">Entrar agora</button>
+           <button class="botao-padrao" @click="goToLogin">Entrar agora</button>
         </div>
     </div>
   </div>
@@ -43,11 +43,12 @@ export default {
   text-shadow: 1px 1px #222;
 }
 
-.cover button {
+.botao-padrao {
   background: #FF6B6B;
   color: #fff;
   width: 220px;
   height: 40px;
+  border: none;
   border-radius: 20px;
 }
 

@@ -3,6 +3,7 @@
     <div class="container" 
       v-for="pet in pets"
       :key="pet.id">
+      
       <img
         :src="pet.image"
         :alt="pet.name"
@@ -100,5 +101,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 </style>

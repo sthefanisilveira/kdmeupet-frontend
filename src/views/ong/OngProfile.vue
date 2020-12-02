@@ -22,7 +22,7 @@
           <p>Vila Nova</p>
           <p>Joinville - SC</p>
           <p>89182-910</p>
-          <button class="button is-link">
+          <button class="button is-warning">
             <i class="fas fa-edit"> </i> Editar
           </button>
         </div>
@@ -41,6 +41,33 @@ export default {
 </script>
 
 <style>
+
+.breadcrumb a {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #292f36;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 0.75em;
+}
+
+.button.is-link {
+    background-color: #ff6b6b;
+    border-color: transparent;
+    color: #fff;
+}
+
+.button.is-link:hover {
+    background-color: #E63946;
+    border-color: transparent;
+    color: #fff;
+}
+
 .ong-profile {
   padding: 10px;
   width: 85vw;

@@ -46,6 +46,18 @@ export default {
 </script>
 
 <style>
+.button.is-primary {
+    background-color: #ff6b6b;
+    border-color: transparent;
+    color: #fff;
+}
+
+.button.is-primary:hover {
+    background-color: #E63946;
+    border-color: transparent;
+    color: #fff;
+}
+
 .user-menuLateral {
   width: 250px;
   min-height: 100vh;
@@ -54,9 +66,13 @@ export default {
   padding: 30px;
 }
 
+.user-itens {
+  padding-top: 30px;
+}
+
 .user-itens li:hover {
   cursor: pointer;
-  background: #7957d5;
+  background: #FF6B6B;
 
 }
 
@@ -69,13 +85,13 @@ export default {
   display: flex;
   padding: 10px 10px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee
+  border-bottom: 1px solid #eee;
 }
 
 .profile-thumbs img {
   border-radius: 50%;
   width: 50px;
-  border: 2px solid #7957d5;
+  border: 2px solid #4ecdc4;
   margin-right: 10px;
 }
 

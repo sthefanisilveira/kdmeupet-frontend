@@ -51,12 +51,12 @@
               <i class="fas fa-heart"></i>
             </button> -->
             <button
-              class="button is-primary"
+              class="button is-danger"
               @click="unlikePet">
               <i class="fas fa-trash">  </i>
             </button> 
             <button
-              class="button is-primary"
+              class="button is-warning"
               @click="unlikePet">
               <i class="fas fa-edit"> </i>
             </button>
@@ -156,6 +156,13 @@ export default {
 </script>
 
 <style scoped>
+
+.button.is-danger {
+    background-color: red;
+    border-color: transparent;
+    color: #fff;
+}
+
 .ong-pets {
   padding: 10px;
   width: 85vw;

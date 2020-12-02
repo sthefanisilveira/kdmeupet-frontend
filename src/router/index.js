@@ -48,6 +48,9 @@ const routes = [
     path: '/ongs-listagem',
     name: 'Ong',
     component: Ong,
+    meta: {
+      publica: true
+    }
   },
   {
     path: '/adote',

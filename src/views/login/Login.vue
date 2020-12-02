@@ -9,10 +9,10 @@
 
     <section class="bg-form">
       <div class="bg-formContent">
-        <h1>Login</h1>
+        <h1>Login</h1> <br />
 
       <form @submit.prevent="makeLogin">
-        <label for="email">E-mail:</label><br>
+        <label for="email">E-mail:</label>
         <input 
 					type="email"
 					v-model="user.email"
@@ -20,7 +20,7 @@
           required>
         <br><br>
 
-        <label for="password">Senha:</label><br>
+        <label for="password">Senha:</label>
         <input type="password"
               minlength="6"
               maxlength="24"
@@ -29,7 +29,7 @@
               required> <br><br>
 
         <div class="center-content">
-          <button id="js-submitItem">Fazer login</button>
+          <button class="botao-padrao" id="js-submitItem">Fazer login</button> <br />
         </div>
 
       </form>
@@ -67,6 +67,16 @@ export default {
 </script>
 
 <style scoped>
+
+input[data-v-2529d779] {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #dadad9;
+    width: 400px;
+    height: 30px;
+    font-size: 1.4em;
+}
+
 .login {
   display: flex;
 }
@@ -133,10 +143,9 @@ p {
 	text-align: center;
 }
 
-button {
+.botao-padrao {
 	margin-top: 20px;
 	width: 160px;
-	background: #3498db;
 	color: #fff;
 	padding: 10px;
 	border: transparent;
@@ -144,6 +153,16 @@ button {
 	cursor: pointer;
 }
 
+.botao-padrao:hover {
+  margin-top: 20px;
+  width: 160px;
+  background: #E63946;
+  color: #fff;
+  padding: 10px;
+  border: transparent;
+  font-size: 1em;
+  cursor: pointer;
+}
 
 label {
 	color: #95a5a6;
@@ -187,5 +206,13 @@ input:focus {
 	text-align: left;
 	font-size: .9em;
 	color: red;
+}
+
+.footer-register a {
+  color: #4ecdc4;
+}
+
+.footer-register {
+  padding-top: 40px;
 }
 </style>
