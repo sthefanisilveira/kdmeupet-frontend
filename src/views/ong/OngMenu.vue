@@ -43,9 +43,13 @@ export default {
   padding: 30px;
 }
 
+.ong-itens {
+  padding-top: 30px;
+}
+
 .ong-itens li:hover {
   cursor: pointer;
-  background: #7957d5;
+  background: #FF6B6B;
 
 }
 
@@ -64,7 +68,7 @@ export default {
 .profile-thumbs img {
   border-radius: 50%;
   width: 50px;
-  border: 2px solid #7957d5;
+  border: 2px solid #4ecdc4;
   margin-right: 10px;
 }
 

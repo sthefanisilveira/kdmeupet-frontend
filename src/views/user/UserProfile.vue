@@ -17,12 +17,12 @@
           src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
         </div>
         <div class="column is-4">
-          <h1>Sarah Castro</h1>
+          <h1>{{users.name}}</h1>
           <p>Rua Agenor da Silva, 98</p>
           <p>Vila Nova</p>
           <p>Joinville - SC</p>
           <p>89182-910</p>
-          <button class="button is-link">
+          <button class="button is-warning">
             <i class="fas fa-edit"> </i> Editar
           </button>
         </div>
@@ -36,6 +36,16 @@
 <script>
 export default {
   name: 'UserProfile',
+  data() {
+    return {
+      users: {
+        name: '',
+      },
+    };
+  },
+  created() {
+    this.users.name = this.$store.state.user.name;
+  },
 }
 </script>
 

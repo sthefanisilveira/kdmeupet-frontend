@@ -20,6 +20,6 @@ export default {
 
 <style>
 .pesquisa-ong {
-  padding: 10px;
+padding-top: 30px;
 }
 </style>

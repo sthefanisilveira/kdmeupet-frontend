@@ -38,13 +38,13 @@
       </div>
     </div>
 
-    <b-button type="is-primary" v-if="mode === 'save'" @click="save">Salvar</b-button>
+    <b-button type="is-success" v-if="mode === 'save'" @click="save">Salvar</b-button>
     <b-button type="is-danger" v-if="mode === 'remove'" @click="remove">Excluir</b-button>
     <b-button class="ml-2" type="is-primary" outlined @click="reset">Cancelar</b-button>
 
     <hr>
     <b-table hoverable striped :data="recursos" :columns="columns">
-      <template>
+      <template slot="actions">
         <b-button type="is-warning" class="mr-2" @click="loadUser(data.item)"><i class="fa fa-edit"></i></b-button>
         <b-button type="is-danger"><i class="fa fa-trash"></i></b-button>
       </template>
@@ -118,6 +118,17 @@ export default {
 </script>
 
 <style>
+.button.is-primary.is-outlined {
+    background-color: transparent;
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.button.is-primary.is-outlined:hover {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
 .ong-recursos {
   padding: 10px;
   width: 85vw;

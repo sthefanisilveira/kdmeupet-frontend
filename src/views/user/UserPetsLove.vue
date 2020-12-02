@@ -39,12 +39,12 @@
           </div>
           <footer class="card-footer">
             <button
-              class="button is-primary"
+              class="button is-success"
               @click="isComponentModalActive">
               <i class="fas fa-home"></i>
             </button>
             <button
-              class="button is-primary"
+              class="button is-warning"
               @click="unlikePet">
               <i class="fas fa-heart-broken"></i>
             </button>
@@ -145,6 +145,7 @@ export default {
 </script>
 
 <style scoped>
+
 .user-pets {
   padding: 10px;
   width: 85vw;

@@ -108,6 +108,18 @@ export default {
 </script>
 
 <style>
+a {
+    color: #ff6b6b;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E63946;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .user-notifications {
   padding: 10px;
   width: 85vw;
@@ -115,7 +127,7 @@ export default {
 
 .badge-time {
   padding: 5px;
-  background: purple;
+  background: #ff6b6b;
   color: #fff;
   border-radius: 8px;
 }
