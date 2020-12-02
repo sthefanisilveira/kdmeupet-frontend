@@ -25,21 +25,21 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                :src="pet.photo"
+                src="../../assets/cao.png"
                 :alt="pet.name" />
             </figure>
           </div>
           <div class="card-content">
             <div class="content is-centered">
               <h5 class="has-text-centered">
-                {{ pet.name }}  | 10 anos
+                {{ pet.name }}  | {{pet.age}} anos
               </h5>
-              <a href="/ong:name">{{pet.ong}}</a>
+              <a  href="/ong:name">{{pet.ong}}</a>
             </div>
           </div>
           <footer class="card-footer">
             <button
-              class="button is-success"
+              class="button is-primary"
               @click="isComponentModalActive">
               <i class="fas fa-home"></i>
             </button>
@@ -70,36 +70,42 @@ export default {
           id: 1,
           photo: '',
           name: 'Boris',
+          age: 2,
           ong: 'Abrigo Animal'
         },
          {
           id: 2,
           photo: '',
           name: 'Juvenal',
+          age: 1,
           ong: 'Quatro Patas'
         },
         {
           id: 3,
-           photo: '',
+          photo: '',
           name: 'Tobi',
+          age: 3,
           ong: 'Ong São Franscisco',
         },
         {
           id: 4,
-           photo: '',
+          photo: '',
           name: 'Caxias',
+          age: 5,
           ong: 'Ong São Judas',
         },
         {
           id: 5,
           photo: '',
           name: 'Bernardo',
+          age: 8,
           ong: '4 patas',
         },
          {
           id: 6,
           photo: '',
           name: 'James',
+          age: 1,
           ong: '4 patas',
         },
       ],
@@ -149,6 +155,21 @@ export default {
 .user-pets {
   padding: 10px;
   width: 85vw;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.image {
+  text-align: center;
+  width: 250px;
+  height: 100px;
 }
 
 .button {

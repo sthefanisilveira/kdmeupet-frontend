@@ -3,12 +3,9 @@
     <div class="container" 
       v-for="pet in pets"
       :key="pet.id">
-      
       <img
-        :src="pet.image"
-        :alt="pet.name"
-        width="244" 
-        height="151" />
+        src="../../assets/cao-mini.png"
+        :alt="pet.name" />
       <div class="card-body">
         <h1> {{ pet.name }} </h1>
         <p>

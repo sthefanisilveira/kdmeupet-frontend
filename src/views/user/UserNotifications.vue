@@ -29,7 +29,7 @@
       >
         <div class="media-left">
           <figure class="image is-64x64">
-            <img :src="notification.photo" alt="Image" />
+            <img src="../../assets/user-logo.png" alt="Image" />
           </figure>
         </div>
         <div class="media-content">
@@ -67,7 +67,6 @@ export default {
       notifications: [
         {
           id: 1,
-          photo: "https://randomuser.me/api/portraits/women/24.jpg",
           user: "James Santana",
           userName: "@jamessantana",
           lastTime: 10,
@@ -76,7 +75,6 @@ export default {
         },
         {
           id: 2,
-          photo: "https://randomuser.me/api/portraits/women/21.jpg",
           user: "Sara Winters",
           userName: "@sarawinters",
           lastTime: 100,
@@ -85,7 +83,6 @@ export default {
         },
         {
           id: 3,
-          photo: "https://randomuser.me/api/portraits/women/20.jpg",
           user: "Jessica Obama",
           userName: "@jessicaobama",
           lastTime: 30,
@@ -94,7 +91,6 @@ export default {
         },
         {
           id: 4,
-          photo: "https://randomuser.me/api/portraits/women/10.jpg",
           user: "Clarise Lispector ",
           userName: "@claricelispector",
           lastTime: 89,

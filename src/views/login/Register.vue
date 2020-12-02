@@ -18,7 +18,6 @@
         <div class="columns">
           <div class="column is-12">
           <div class="profile-type">
-            <label for="" class="">Qual é o seu perfil?</label> <br />
             <button class="botao-padrao" @click="showForm('ong')">Sou Ong</button>
 
             <button class="botao-padrao ml-2" @click="showForm('profile')">Quero adotar</button>
