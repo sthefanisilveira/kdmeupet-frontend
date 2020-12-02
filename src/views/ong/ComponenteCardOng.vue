@@ -3,11 +3,11 @@
     <div class="container-ong"
       v-for="ong in ongs"
       :key="ong.id">
-      <img 
-        :src="ong.photo"
-        :alt="ong.name" 
-        width="244" 
-        height="151" />
+      <img
+        src="https://www.shareicon.net/data/256x256/2016/07/29/803582_heart_512x512.png"
+        :alt="ong.name"
+        width="220"
+        height="100" />
       <div class="card-body">
         <h1> {{ ong.name }} </h1>
         <p>
@@ -52,7 +52,7 @@ export default {
           console.log(error);
       });
     },
-    
+
     // setImages(response) {
     //   for (let i = 0; i < this.ongs.length; i++) {
     //     this.ongs[i].photo = response.data.message;

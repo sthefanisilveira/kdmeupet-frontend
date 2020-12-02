@@ -5,22 +5,7 @@
     </div>
     <div class="cards">
       <div class="card-animais">
-        <img src="../../assets/dog1.jpg" width="180" height="151" />
-        <p>Bolinha, 8 anos - macho</p>
-        <a href="">Quero ver</a>
-      </div>
-      <div class="card-animais">
-        <img src="../../assets/dog1.jpg" width="180" height="151" />
-        <p>Bolinha, 8 anos - macho</p>
-        <a href="">Quero ver</a>
-      </div>
-      <div class="card-animais">
-        <img src="../../assets/dog1.jpg" width="180" height="151" />
-        <p>Bolinha, 8 anos - macho</p>
-        <a href="">Quero ver</a>
-      </div>
-      <div class="card-animais">
-        <img src="../../assets/dog1.jpg" width="180" height="151" />
+        <img src="https://png.pngtree.com/element_our/20190530/ourmid/pngtree-pet-icon-image_1267786.jpg" width="180" height="151" />
         <p>Bolinha, 8 anos - macho</p>
         <a href="">Quero ver</a>
       </div>
